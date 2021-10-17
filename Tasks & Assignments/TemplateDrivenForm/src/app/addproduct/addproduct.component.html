@@ -1,0 +1,54 @@
+<!-- <p>add product here!</p> -->
+<br>
+<div class="card">
+    <div class="card-body">
+      <h4 class="card-title" style="margin-left: 30%;">Add Product (Template Driven Form)</h4>
+      <br>
+      <div class="container">
+      <div style="background-color: rgb(230, 225, 225);" class="row">
+  
+        <div class="col-md-6" style="margin-left: 20%;">
+
+
+          <form novalidate #form="ngForm" (ngSubmit)="onSubmit(form)">
+
+          <!-- {{form.control.title}} -->
+          
+          <!-- {{<form action="" class="value title"></form> | json}} -->
+
+            <div class="form-group">
+              <label>Title</label>
+              <input name="title" type="text" class="form-control" ngModel>
+            </div>
+            <div class="form-group ">
+              <label>Model Name</label>
+              <input name="model" type="text"  class="form-control" ngModel>
+            </div>
+            <div class="form-group ">
+              <label>Color</label>
+              <input name="color" type="text"  class="form-control" ngModel>
+            </div>
+            <div class="form-group " ngModel>
+              <label>Product Type</label>
+              <select class="form-control">
+                <option *ngFor="let p of productTypes" [value]="p">{{p}}</option>
+              </select>
+            </div>
+            <div class="form-group ">
+              <label>Brand</label>
+              <input name="brand" type="text" class="form-control" ngModel>
+            </div>
+            <div class="form-group">
+              <label>Price</label>
+              <input name="price" type="text" class="form-control" ngModel>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-secondary" style="margin-bottom: 10px;">Submit</button>&nbsp;
+            <button type="reset" class="btn btn-secondary" style="margin-bottom: 10px;">&nbsp;Reset</button>
+          </form>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+</div>

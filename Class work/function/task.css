@@ -1,0 +1,19 @@
+body {
+    margin: 0mm;
+    background-color: lightcoral;
+
+}
+
+.formalignment {
+    align-items: center;
+    background-color: lightgoldenrodyellow;
+
+}
+
+form {
+    padding-top: 400px;
+}
+
+.input1{
+    padding-left: 170px;
+}

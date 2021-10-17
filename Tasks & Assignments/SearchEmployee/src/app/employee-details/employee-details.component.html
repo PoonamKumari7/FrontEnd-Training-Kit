@@ -1,0 +1,32 @@
+<!-- <p>employee-search works!</p> -->
+
+<div class="form-group row">
+<div class="form-group row" style="margin-top: 27px;">
+    <label for="search" class="col-sm-2 col-form-label" style="text-align: right; ">Search by firstName</label>
+    <div class="col-sm-6">
+        <input type="text" [(ngModel)]="searchValue" class = "form-control" id="search"/>
+    </div>
+</div>
+
+<div class="container">
+<table class="table" style="margin-top: 50px;">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">firstName</th>
+            <th scope="col">lastName</th>
+            <th scope="col">email</th>
+            <th scope="col">mobile</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let row of employeeData | searchfilter: searchValue'>
+            <td scope="col">{{ row.id }}</td>
+            <td scope="col">{{ row.firstName }}</td>
+            <td scope="col">{{ row.lastName }}</td>
+            <td scope="col">{{ row.email }}</td>
+            <td scope="col">{{ row.mobile }}</td>
+        </tr>
+    </tbody>
+</table>
+</div>

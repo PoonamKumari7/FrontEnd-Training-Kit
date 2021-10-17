@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="first" type="text" name="goldprice" placeholder="Enter the gold price">
+    <input id="second" type="text" name="grams" onblur="grams()" placeholder="Enter the weights">
+    <p id="p1"></p>
+</body>
+
+<script>
+    function grams() {
+        var price = document.getElementById("goldprice").value;
+        var grams = document.getElementById("grams").value;
+
+        var out = parseInt(parse) * parseInt(grams);
+
+        document.getElementById("p1").innerHTML = out;
+    }
+</script>
+
+</html>

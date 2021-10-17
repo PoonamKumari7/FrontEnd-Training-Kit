@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>String in JavaScript</h2>
+    <p>The 'length' property returns the length of a string :</p>
+    <p id="stringdemo"></p>
+
+    <p>The slice() method extract a part of a string
+        and returns the extracted parts in a new string:</p>
+    <p id="extractstring"></p>
+
+    <p>The substring() method extract a part of a string and returns the extracted parts in a new string:</p>
+    <p id="substring"></p>
+
+    <p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo">Please visit Microsoft!</p>
+
+<script>
+    //length of string
+    let text = "POONAM";
+    document.getElementById("stringdemo").innerHTML = text.length;
+
+    //extracting string parts
+    //JavaScript counts positions from zero. First position is 0.
+    let str1 = "James, Poonam, Donald";
+    document.getElementById("extractstring").innerHTML = str1.slice(7,12);
+    
+    //If a parameter is negative, the position is counted from the end of the string.
+    let str2 = "James, Poonam, Donald";
+    str2.slice(-12, -6)    // Returns Banana
+
+    //substring
+    let str3 = "James, Poonam, Donald";
+    document.getElementById("substring").innerHTML = str3.substring(7,13);
+
+    var a = 'This is JavaScript test'; 
+var result = a.substring(4, 5); 
+document.getElementById("substring").innerHTML = str3.substring(7,13);
+
+     
+
+    function myFunction() {
+        let text = document.getElementById("demo").innerHTML;
+        document.getElementById("demo").innerHTML =
+        text.replace("Microsoft","W3Schools");
+}
+
+
+
+
+</script>
+
+</body>
+</body>
+</html>

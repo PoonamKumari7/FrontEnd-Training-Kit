@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My first page</title>
+
+    <script>
+        function myFunction() {
+            //alert("Hello");
+            document.getElementById("p1").innerHTML = "Hello java script";
+        }
+
+        function changeBgColor() {
+            document.getElementById("bd").style.backgroundColor = "blue";
+        }
+
+        function changeAttribute() {
+            document.getElementById("image").setAttribute.height="50";
+        }
+
+    </script>
+</head>
+<body id="bd" style="background-color: crimson;">
+    <p>This is first paragraph.</p>
+    <p>This is second paragraph.</p>
+    <img id = "image" src="bgimage1.jpg" height="500px" width="250px">
+    <button onclick="myFunction()">click here to call function</button>
+    <button onclick="changeBgColor()">click to change color</button>
+    <button onclick="changeAttribute()">click to change attr</button>
+</body>
+</html>

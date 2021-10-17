@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="num1" type="text" placeholder="Enter first number">
+    <input id="limit" type="text" placeholder="Enter limit">
+    <button onclick="multi()">Click</button>
+<script>
+    function multi() {
+    let number = document.getElementById("num1").value;
+    let limit = document.getElementById("limit").value;
+
+    let x = parseInt(number);
+    let y = parseInt(limit);
+
+    //alert(number);
+
+    for(let i =1; i<y+1; i++)
+    {
+        document.write(x+"*"+i +" = "+(x*i)+"<br>");
+    }
+    }
+</script>
+</body>
+</html>

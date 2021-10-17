@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="task.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+<script>
+        function add() {
+        var a,b,c;
+        a=Number(document.getElementById("first").value);
+        b=Number(document.getElementById("second").value);
+        c= a + b;
+        alert(c);
+        
+        }
+
+        function sub() {
+        var a,b,c;
+        a=Number(document.getElementById("first").value);
+        b=Number(document.getElementById("second").value);
+        c= a - b;
+        alert(c);
+        }
+        
+        function Mul() {
+        var a,b,c;
+        a=Number(document.getElementById("first").value);
+        b=Number(document.getElementById("second").value);
+        c= a * b;
+        alert(c);
+        }
+
+        function Div() {
+        var a,b,c;
+        a=Number(document.getElementById("first").value);
+        b=Number(document.getElementById("second").value);
+        c= a / b;
+        alert(c);
+        }
+</script>
+</head>
+<body>
+    <div class="formalignment">
+    <form>
+    <label class = "input1">Enter the First number : </label> <input id="first">
+    Enter the Second number: <input id="second">
+    <button onclick="add()">Add</button>
+    <button onclick="sub()">Subtract</button>
+    <button onclick="Mul()">Multiply</button>
+    <button onclick="Div()">Divide</button>
+    </form>
+</div>
+</body>
+</html>
