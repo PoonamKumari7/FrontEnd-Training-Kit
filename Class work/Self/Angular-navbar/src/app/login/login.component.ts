@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,20 +9,23 @@ import { FormGroup, FormControl, Validators, AbstractControl } from '@angular/fo
 })
 export class LoginComponent implements OnInit {
 
-  loginForm: FormGroup;
+  hide : boolean = false;
 
-  constructor() {
-    this.loginForm = new FormGroup({
-      email : new FormControl('', [Validators.required, Validators.email]),
-      password : new FormControl('', [Validators.required, Validators.minLength(8)])
-    });
+  constructor(private fb : FormBuilder, private route: Router) { }
+
+  ngOnInit() {
    }
 
-  ngOnInit(): void {
-    
-  }
-
+  loginForm : FormGroup = this.fb.group({
+    email : ['', [Validators.required, Validators.email]],
+    password : ['', [Validators.required, Validators.minLength(8)]]
+  });
+  
   onLogin(){
-    alert("logged in");
+      if (!this.loginForm.valid) {
+        // this.route.navigate(['/login']);
+        return;
+      }
+      console.log(this.loginForm.value);
+    }
   }
-}
