@@ -4,19 +4,19 @@
         <P>Sign Into Your Account </P>
       </div>
       <form (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
-        <div class="emailInput">
+        <!-- <div class="emailInput"> -->
           <mat-form-field class="full-width" appearance="outline">
-            <mat-label>Email</mat-label>
+            <mat-label>Name</mat-label>
             <input
-              formControlName="email"
+              formControlName="name"
               matInput
-              placeholder="Enter email address" required
+              placeholder="Enter the admin name" required
             />
-            <mat-error *ngIf="!loginForm.controls['email'].valid">
-                Email is required
+            <mat-error *ngIf="!loginForm.controls['name'].valid">
+                Name is required & should be only letters
               </mat-error>
           </mat-form-field>
-        </div>
+        <!-- </div> -->
 
         <div>
           <span>
@@ -32,15 +32,15 @@
             </mat-icon>
         </button>
         <mat-error *ngIf="!loginForm.controls['password'].valid">
-            Password is required
+           Password is required & should be atleast 8 characters
           </mat-error>
         </mat-form-field> 
         </div>
         <button mat-flat-button color="primary">Login</button>
       </form>
 
-      <div class="button-row">
+      <!-- <div class="button-row">
         <p>Create New Account</p>
-      </div>
+      </div> -->
     </mat-card-content>
   </mat-card>

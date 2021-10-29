@@ -1,0 +1,32 @@
+<div class="container">
+
+<mat-form-field>
+  <input matInput [matDatepicker]="datepicker" placeholder="check-in Date">
+  <mat-datepicker-toggle matSuffix [for] = "datepicker"></mat-datepicker-toggle>
+  <mat-datepicker #datepicker ></mat-datepicker>
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput [matDatepicker]="datepicker" placeholder="check-out Date">
+  <mat-datepicker-toggle matSuffix [for] = "datepicker"></mat-datepicker-toggle>
+  <mat-datepicker #datepicker ></mat-datepicker>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-select placeholder="adults">
+    <mat-option value="1">1</mat-option>
+    <mat-option value="2">2</mat-option>
+    <mat-option value="3">3</mat-option>
+    <mat-option value="4">4</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-select placeholder="children">
+    <mat-option value="1">1</mat-option>
+    <mat-option value="2">2</mat-option>
+    <mat-option value="3">3</mat-option>
+    <mat-option value="4">4</mat-option>
+  </mat-select>
+</mat-form-field>
+</div>
